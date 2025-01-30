@@ -1,0 +1,291 @@
+
+
+body{
+    display:grid;
+    grid-template: 10vw 10vw 1fr / 20vw 2fr 1fr;
+    background-image: url("https://i.pinimg.com/originals/be/1e/6b/be1e6bcc16350949f8bd9d215aa6b1d5.jpg");
+    background-size:cover;
+    min-width: 700px;
+    min-height: 700px;
+}
+
+body > *{
+    background-color: antiquewhite;
+}
+
+h1{
+    font-size: 50px;
+}
+
+header {
+    padding: 10px;
+    font-family: "Inconsolata", monospace;
+    font-weight: 400;
+    font-style: normal;
+    grid-column: 1/4 ;
+    grid-row: 1;
+
+    text-align: center;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+h3{
+    text-align:center;
+    font-size: 20px;
+}
+
+/*-------------------Pour le cadre d'inscription et de connexion----------------*/
+
+.identification {
+    background-color:transparent;
+    display: grid;
+    grid-template: 1fr 4vw / 1fr 1fr;
+    position: absolute;
+    z-index: 2;
+    left: 50%;
+    top:50%;
+    transform: translate(-50%, -50%);
+}
+
+#identification > section >button{
+    color: black;
+}
+
+#inscription{
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: 30px;
+    background-color:antiquewhite;
+    grid-column: 2;
+    font-family: "Inconsolata", monospace;
+    font-style: normal;
+    border-radius: 15%;
+    border: black solid 2px;
+}
+
+#connexion{
+    padding-left: 10px;
+    padding-right: 10px; 
+    margin: 30px; 
+    background-color:antiquewhite;
+    grid-column: 1;
+    font-family: "Inconsolata", monospace;
+    font-style: normal;
+    border-radius: 15%;
+    border: black solid 2px;
+    
+}
+
+#validateI{
+    margin: 10px;
+}
+
+#validateC{
+    margin: 10px;
+}
+
+/*-------------------Pour les bouttons----------------*/
+
+.startButton { 
+    background-color: transparent;
+    position: absolute;
+    left: 50%;
+    top:40%;
+    transform: translate(-50%, -50%);
+    display: flex;
+
+}
+
+.startButton>button{
+    margin: 10px;
+}
+
+button {
+    --button_radius: 0.75em;
+    --button_color: #e8e8e8;
+    --button_outline_color: #000000;
+    font-size: 13px;
+    font-family: "Inconsolata", monospace;
+    border: none;
+    border-radius: var(--button_radius);
+    background: var(--button_outline_color);
+  }
+  
+  .button-top {
+    display: block;
+    box-sizing: border-box;
+    border: 2px solid var(--button_outline_color);
+    border-radius: var(--button_radius);
+    padding: 0.75em 1.5em;
+    background: var(--button_color);
+    color: var(--button_outline_color);
+    transform: translateY(-0.2em);
+    transition: transform 0.1s ease;
+    
+  }
+  
+  button:hover .button-top {
+    transform: translateY(-0.33em);
+  }
+  
+  button:active .button-top {
+    transform: translateY(0);
+  }
+
+  /*-------------------Message d'erreurs----------------*/
+
+.error-message{
+    text-align: center;
+    font-family: "Inconsolata", monospace;
+    font-style: normal;
+    padding: 4px;
+    margin: auto;
+    background-color: antiquewhite;
+    border: black solid 1px;
+
+    position: fixed;
+    z-index: 3;
+    left: 50%;
+    top:70%;
+    transform: translate(-50%, -50%);
+}
+
+.align {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+/*-------------------Zone d'info du jeu (compteur) ----------------*/
+#gameInfo{  
+    padding: 10px;
+    border-radius: 15px;
+    border: 2px solid black;
+    margin-top:auto;
+    margin-bottom:auto;
+    grid-column: 3 ;
+    grid-row: 2;
+
+    font-family: "Inconsolata", monospace;
+    font-weight: 400;
+    font-style: normal;
+   
+}
+
+/*-------------------Pendu----------------*/
+
+#images {
+    padding-left:15px;
+    margin: auto;
+    background-color: antiquewhite;
+    border: 2px solid black;
+    border-radius: 15px;
+    grid-column: 1 ;
+    grid-row: 2/4;
+}
+
+/*-------------------Mot à deviner----------------*/
+#dispGame {
+    background-color: antiquewhite;
+    padding: 10px;
+    margin-left: auto ;
+    margin-right: auto;
+    margin-top: 20px;
+    height: 70%;
+    border-radius: 15px;
+    border: 2px solid black;
+    text-align: center;
+    grid-column: 2 ;
+    grid-row: 2;
+
+    font-family: "Inconsolata", monospace;
+    font-size:25px;
+    min-width: 500px;
+    min-height: 200px;
+}
+
+#dispGame >button{
+    margin: 10px;
+}
+
+/*-------------------Boutton des lettres----------------*/
+#letterPlayed{
+    padding: 10px;
+    border-radius: 15px;
+    border: 2px solid black;
+    margin-top:auto;
+    margin-bottom:auto;
+    grid-column: 3 ;
+    grid-row: 3/4;
+    text-align: center;
+    font-size: 25px;
+    font-family: "Inconsolata", monospace;
+} 
+
+#letterPlayed >p span  {
+    
+    text-align: center;
+    display: inline-block;
+    border: 2px solid black;
+    margin: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 20%;
+}
+
+/*-------------------Écran de chargement----------------*/
+
+#loading {
+    background-color: grey;
+    opacity: 80%;
+    filter: brightness(50%);
+    position: absolute;
+    z-index: 3;
+    left: 50%;
+    top:50%;
+    transform: translate(-50%, -50%);
+    width: 100%; 
+    height: 100%;
+    text-align: center;
+}
+
+.loadScreen{
+    display: flex;
+    align-items: center; 
+}
+
+#loading >img {
+    filter: brightness(1%);
+    opacity: 100%;
+    margin: auto;
+}
+
+.loadScreen{
+    filter: brightness(50%);
+}
+
+/*-------------------Autres----------------*/
+
+#disconnect{
+    margin: auto;
+    position: absolute;
+    left: 90%;
+    top:11%;
+    transform: translate(-50%, -50%);
+}
+
+.ok{
+    background-color: green ;
+    
+}
+.ko{
+    background-color: red;
+}
+
+.notDisplayed {
+    display: none;
+}

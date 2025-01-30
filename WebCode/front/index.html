@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Anton&family=Jersey+10&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+        <title>Jeu du pendu</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="./style.css">
+    </head>
+    <body>
+        <header>
+                <h1>Le jeu du pendu</h1>
+        </header>
+            <div id="identity" class="identification"> 
+                <section id="connexion" class="align">
+                    <h3>Connexion</h3>
+                        <p>Nom d'utilisateur</p>
+                        <label> 
+                            <input type="text" id="nameC" name="Nom d'utilisateur" placeholder=" identifiant"/>
+                        </label>
+                        <p>Mot de passe</p>
+                        <label>
+                            <input type="password" id="mdpC" name="Mot de passe" placeholder=" mot de passe"/>
+                        </label>
+                    <button id="validateC" name="button valider connexion "><span class="button-top">Se connecter</span></button>
+                </section>
+                <section id="inscription" class="align">
+                    <h3>Inscription</h3>
+                        <p>Nom d'utilisateur</p>
+                        <label>
+                            <input type="text" id="nameI" name="Nom d'utilisateur" placeholder=" identifiant"/>
+                        </label>
+                        <p>Mot de passe</p>
+                        <label>
+                            <input type="password" id="mdpI" name="Mot de passe" minlength="8" placeholder=" mot de passe" required />
+                        </label>
+                    <button id="validateI" name="button valider inscription "><span class="button-top">S'inscrire</span></button>
+                </section>
+            </div>
+            <p id="error-message" class="notDisplayed" style="color: red;"></p>
+            <div id="startButton" class="notDisplayed">
+                <button id="JOUER" name="Nouvelle partie"><span class="button-top">Nouvelle partie</span></button>
+                <button id="Continuer" name="Continuer"><span class="button-top">Continuer</span></button>
+            </div>
+            <div id="images"  class="notDisplayed">
+                <svg width="258" height="400">
+                    <rect y="380" x="2" width="250" height="10" style="fill:rgb(112, 94, 54);stroke-width:4;stroke:black" />
+
+                    <line x1="20" y1="380" x2="20" y2="10" style="stroke:black;stroke-width:4"/>
+
+                    <line x1="18" y1="10" x2="140" y2="10" style="stroke:black;stroke-width:4"/>
+
+                    <line id="i1" class="hide" x1="138" y1="10" x2="138" y2="50" style="stroke:black;stroke-width:4"/>
+                    
+                    <circle id="i2" class="hide" cx="138" cy="80" r="30" stroke="black" stroke-width="4" fill="white" />
+
+                    <line id="i3" class="hide" x1="138" y1="110" x2="138" y2="250" style="stroke:black;stroke-width:4"/>
+
+                    <line id="i4" class="hide" x1="138" y1="140" x2="100" y2="200" style="stroke:black;stroke-width:4"/>
+
+                    <line id="i5" class="hide" x1="138" y1="140" x2="178" y2="200" style="stroke:black;stroke-width:4"/>
+
+                    <line id="i6" class="hide" x1="138" y1="250" x2="100" y2="310" style="stroke:black;stroke-width:4"/>
+
+                    <line id="i7" class="hide" x1="138" y1="250" x2="178" y2="310" style="stroke:black;stroke-width:4"/>
+                </svg>
+            </div>
+
+            <div id="gameInfo" class="notDisplayed">
+                <p> Nombre d'erreur : <span id="errorCompt">0</span></p>
+            </div>
+            <div id="dispGame" class="notDisplayed">
+                <p>Clique sur une lettre et devine le mot!</p>
+                <p id="word2guess"></p>
+                <button id="restartb" name="restartb"><span class="button-top">Nouvelle Partie</span></button>
+            </div>
+            <div id="letterPlayed"  class="notDisplayed">
+                <p>
+                    <span>A</span>
+                    <span>B</span>
+                    <span>C</span>
+                    <span>D</span>
+                    <span>E</span>
+                    <span>F</span>
+                    <span>G</span>
+                    <span>H</span>
+                    <span>I</span>
+                    <span>J</span>
+                    <span>K</span>
+                    <span>L</span>
+                    <span>M</span>
+                    <span>N</span>
+                    <span>O</span>
+                    <span>P</span>
+                    <span>Q</span>
+                    <span>R</span>
+                    <span>S</span>
+                    <span>T</span>
+                    <span>U</span>
+                    <span>V</span>
+                    <span>W</span>
+                    <span>X</span>
+                    <span>Y</span>
+                    <span>Z</span>
+                </p>
+            </div>
+        <div id="loading" class="notDisplayed">
+            <img src="./chargement icon.gif"  alt="icone de chargement" ></img>
+        </div>
+        <button id="disconnect" class="notDisplayed" name="disconnect"><span class="button-top">Deconnexion</span></button>
+    <script src="./script.js" defer></script>
+    </body>
+</html>
